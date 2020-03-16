@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Notepad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKA-ah-6uO">
+                                <rect key="frame" x="184" y="59" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="TU2-Hu-W4z"/>
+                                </constraints>
+                                <state key="normal" title="추가"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-Ic-Uez">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTableViewCell" rowHeight="120" id="IaB-CQ-2Ua" customClass="NoteTableViewCell" customModule="Notepad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IaB-CQ-2Ua" id="5YO-Ia-ARH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MBi-0H-8Qi">
+                                                    <rect key="frame" x="15" y="9" width="101" height="102"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="MBi-0H-8Qi" secondAttribute="height" multiplier="101:102" id="4Cp-Jo-7SG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제 목" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9x-0Y-ez5">
+                                                    <rect key="frame" x="124" y="11" width="255" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i8-Tz-Jlw">
+                                                    <rect key="frame" x="124" y="37.5" width="255" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="J9a-Fj-SX2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작 성 일 : 2010-02-15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovj-Bw-bkP">
+                                                    <rect key="frame" x="124" y="95.5" width="255" height="13.5"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MBi-0H-8Qi" firstAttribute="height" secondItem="5YO-Ia-ARH" secondAttribute="height" multiplier="0.85" id="0GG-q6-EvP"/>
+                                                <constraint firstItem="5i8-Tz-Jlw" firstAttribute="trailing" secondItem="J9x-0Y-ez5" secondAttribute="trailing" id="20C-87-ZxM"/>
+                                                <constraint firstItem="5i8-Tz-Jlw" firstAttribute="leading" secondItem="J9x-0Y-ez5" secondAttribute="leading" id="6wR-lb-zRO"/>
+                                                <constraint firstItem="MBi-0H-8Qi" firstAttribute="centerY" secondItem="5YO-Ia-ARH" secondAttribute="centerY" id="B1m-EJ-41e"/>
+                                                <constraint firstItem="5i8-Tz-Jlw" firstAttribute="centerY" secondItem="MBi-0H-8Qi" secondAttribute="centerY" id="FEh-EU-aRn"/>
+                                                <constraint firstItem="J9x-0Y-ez5" firstAttribute="top" secondItem="MBi-0H-8Qi" secondAttribute="top" constant="2" id="PCJ-ey-qHA"/>
+                                                <constraint firstItem="Ovj-Bw-bkP" firstAttribute="leading" secondItem="J9x-0Y-ez5" secondAttribute="leading" id="S7B-OT-Dap"/>
+                                                <constraint firstItem="5i8-Tz-Jlw" firstAttribute="width" secondItem="J9x-0Y-ez5" secondAttribute="width" id="X9w-Eo-ASx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="J9x-0Y-ez5" secondAttribute="trailing" constant="15" id="fT1-gL-38B"/>
+                                                <constraint firstItem="Ovj-Bw-bkP" firstAttribute="trailing" secondItem="J9x-0Y-ez5" secondAttribute="trailing" id="lKz-7c-Nw5"/>
+                                                <constraint firstItem="MBi-0H-8Qi" firstAttribute="leading" secondItem="5YO-Ia-ARH" secondAttribute="leading" constant="15" id="lOC-YB-wJS"/>
+                                                <constraint firstItem="Ovj-Bw-bkP" firstAttribute="bottom" secondItem="MBi-0H-8Qi" secondAttribute="bottom" constant="-2" id="sGa-Hg-ljg"/>
+                                                <constraint firstItem="J9x-0Y-ez5" firstAttribute="leading" secondItem="MBi-0H-8Qi" secondAttribute="trailing" constant="8" id="vyz-gL-Upz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLb" destination="5i8-Tz-Jlw" id="NRU-Zq-XOk"/>
+                                            <outlet property="firstIv" destination="MBi-0H-8Qi" id="rHT-UC-dtR"/>
+                                            <outlet property="titleLb" destination="J9x-0Y-ez5" id="KGS-iK-etd"/>
+                                            <outlet property="writeDateLb" destination="Ovj-Bw-bkP" id="ASa-4w-o2a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="q7h-QP-QuL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iki-Vm-YcV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qKA-ah-6uO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="70Q-GI-BLu"/>
+                            <constraint firstItem="Y0F-Ic-Uez" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UJv-W7-Md0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y0F-Ic-Uez" secondAttribute="bottom" id="X5v-QM-uBV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y0F-Ic-Uez" secondAttribute="trailing" id="dV8-37-mhZ"/>
+                            <constraint firstItem="qKA-ah-6uO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="i2u-id-Ilv"/>
+                            <constraint firstItem="Y0F-Ic-Uez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="lr6-Nk-H5J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="goNoteBtn" destination="qKA-ah-6uO" id="U3d-1x-gVJ"/>
+                        <outlet property="tableView" destination="Y0F-Ic-Uez" id="RxJ-pF-nFU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="NOw-Fn-0q2">
+            <objects>
+                <viewController storyboardIdentifier="NoteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EHm-hI-TPb" customClass="NoteViewController" customModule="Notepad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ig1-OW-DAr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz2-LH-PCn">
+                                <rect key="frame" x="25" y="79" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="제 목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eoc-1u-Fhr">
+                                <rect key="frame" x="15" y="153" width="384" height="30"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dRl-m6-cED">
+                                <rect key="frame" x="15" y="238" width="384" height="493"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="yes"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EHm-hI-TPb" id="kgN-aq-Ttv"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-Ya-UeR">
+                                <rect key="frame" x="176" y="784" width="62" height="42"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="✓ OK"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eoc-1u-Fhr" firstAttribute="leading" secondItem="5hB-6H-rdb" secondAttribute="leading" constant="15" id="0Bb-uH-Sya"/>
+                            <constraint firstItem="Eoc-1u-Fhr" firstAttribute="top" secondItem="Wz2-LH-PCn" secondAttribute="bottom" constant="44" id="2DO-Iu-AQx"/>
+                            <constraint firstItem="dRl-m6-cED" firstAttribute="trailing" secondItem="Eoc-1u-Fhr" secondAttribute="trailing" id="3iC-zf-qn3"/>
+                            <constraint firstItem="dRl-m6-cED" firstAttribute="height" secondItem="ig1-OW-DAr" secondAttribute="height" multiplier="0.55" id="4pz-dW-Ruh"/>
+                            <constraint firstItem="5hB-6H-rdb" firstAttribute="bottom" secondItem="yd9-Ya-UeR" secondAttribute="bottom" constant="36" id="Paz-w9-yEo"/>
+                            <constraint firstItem="5hB-6H-rdb" firstAttribute="trailing" secondItem="Eoc-1u-Fhr" secondAttribute="trailing" constant="15" id="YYY-Sn-nhI"/>
+                            <constraint firstItem="5hB-6H-rdb" firstAttribute="bottom" secondItem="dRl-m6-cED" secondAttribute="bottom" priority="1" constant="131" id="ZBu-sx-HBA"/>
+                            <constraint firstItem="yd9-Ya-UeR" firstAttribute="centerX" secondItem="ig1-OW-DAr" secondAttribute="centerX" id="cCY-BJ-v9D"/>
+                            <constraint firstItem="Wz2-LH-PCn" firstAttribute="top" secondItem="5hB-6H-rdb" secondAttribute="top" constant="35" id="f6F-N3-dD2"/>
+                            <constraint firstItem="dRl-m6-cED" firstAttribute="leading" secondItem="Eoc-1u-Fhr" secondAttribute="leading" id="fNH-b5-sPM"/>
+                            <constraint firstItem="dRl-m6-cED" firstAttribute="top" secondItem="Eoc-1u-Fhr" secondAttribute="bottom" constant="55" id="y96-fS-Ke3"/>
+                            <constraint firstItem="Wz2-LH-PCn" firstAttribute="leading" secondItem="5hB-6H-rdb" secondAttribute="leading" constant="25" id="yGl-h0-YsQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5hB-6H-rdb"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="ZBu-sx-HBA" id="fHT-5j-96u"/>
+                        <outlet property="btnDone" destination="yd9-Ya-UeR" id="GtW-3z-VJa"/>
+                        <outlet property="goBackBtn" destination="Wz2-LH-PCn" id="6P7-hx-aoL"/>
+                        <outlet property="tfTitle" destination="Eoc-1u-Fhr" id="Lf8-H2-FgF"/>
+                        <outlet property="tvContent" destination="dRl-m6-cED" id="7wV-iB-a40"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HiO-r8-vtt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.60869565217399" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
