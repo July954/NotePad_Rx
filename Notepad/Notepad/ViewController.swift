@@ -48,7 +48,7 @@ class ViewController: BaseViewController {
             .asObservable()
             .subscribe(onNext: { (_) in
                 let vc = Utilty.shared.getStoryboardWithController(strSBName: "Main", strControllerName: "NoteViewController") as! NoteViewController
-                self.noteViewType.accept(.ADD)
+                vc.currentType = .ADD
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disPoseBag)
@@ -100,8 +100,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = Utilty.shared.getStoryboardWithController(strSBName: "Main", strControllerName: "NoteViewController") as! NoteViewController
         vc.setUpdateNoteDataModel(dataModel: StorageModel.storage.readNote(at: indexPath.row))
-        
-        self.noteViewType.accept(.UPDATE)
+        vc.currentType = .UPDATE
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
